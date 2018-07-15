@@ -14,18 +14,18 @@ async function deleteFileData() {
 
 function inFiveSeconds() {
   return new Promise( (resolve) => {
-    setTimeout(function() {
+    setTimeout(function () {
       resolve();
     }, 5000);
   });
 }
 
-async function main(){
-  console.log("Clearing data in 5 seconds...")
+async function main() {
+  console.log('Clearing data in 5 seconds...');
   await inFiveSeconds();
   await deleteFileData();
   await deleteStorageData();
-  console.log("Data is cleared!");
+  console.log('Data is cleared!');
 }
 
 main();
