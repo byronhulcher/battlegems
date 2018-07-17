@@ -2,15 +2,15 @@
   "//1": "describes your app and its dependencies",
   "//2": "https://docs.npmjs.com/files/package.json",
   "//3": "updating this file will download and update your packages",
-  "name": "my-glitch-app",
-  "version": "0.0.1",
-  "description": "What am I about?",
+  "name": "twitter-image-downloader",
+  "version": "0.1.0",
+  "description": "Track the images posted by a Twitter account and optionally upload them to an S3 bucket",
   "scripts": {
     "track-media": "node ./lib/input/track-media.js",
     "upload-media": "node ./lib/input/upload-media.js",
     "clear-local-data": "rimraf .data",
     "start": "npm run track-media; npm run upload-media; npm run app",
-    "app": "node app.js",
+    "app": "node server.js",
     "eslint": "eslint ./"
   },
   "dependencies": {
@@ -27,7 +27,7 @@
     "node": "10"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/welcome-project"
+    "url": "https://glitch.com/edit/#!/twitter-image-downloader"
   },
   "license": "MIT",
   "keywords": [
